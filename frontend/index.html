@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechResolve | IT Troubleshooting Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div>
+            <h1>TechResolve</h1>
+            <p>Intelligent IT Troubleshooting Assistant</p>
+        </div>
+
+        <div class="status">
+            <span class="dot"></span>
+            Diagnostic System
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <h2>System Health Dashboard</h2>
+
+            <p>
+                Diagnose common computer and network issues
+                with one click.
+            </p>
+
+            <button id="run-btn" onclick="runDiagnostics()">
+                Run Full Diagnostics
+            </button>
+
+            <p id="last-updated">
+                No diagnostic report generated yet.
+            </p>
+        </section>
+
+        <!-- Diagnostic Summary -->
+
+        <section class="summary">
+
+            <div class="summary-card">
+                <h3>Internet</h3>
+                <p id="internet-status">Not Checked</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Performance</h3>
+                <p id="performance-status">Not Checked</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Storage</h3>
+                <p id="storage-status">Not Checked</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>DNS</h3>
+                <p id="dns-status">Not Checked</p>
+            </div>
+
+        </section>
+
+        <!-- System Performance -->
+
+        <section class="details">
+
+            <h2>System Performance</h2>
+
+            <div class="detail-card">
+                <h3>CPU Usage</h3>
+
+                <div class="progress">
+                    <div id="cpu-bar"></div>
+                </div>
+
+                <p id="cpu-value">0%</p>
+            </div>
+
+            <div class="detail-card">
+                <h3>RAM Usage</h3>
+
+                <div class="progress">
+                    <div id="ram-bar"></div>
+                </div>
+
+                <p id="ram-value">0%</p>
+            </div>
+
+            <div class="detail-card">
+                <h3>Available Storage</h3>
+                <p id="storage-value">Not Checked</p>
+            </div>
+
+        </section>
+
+        <!-- Smart Recommendations -->
+
+        <section class="recommendations">
+
+            <h2>Smart Troubleshooting Recommendations</h2>
+
+            <div id="recommendation-list">
+                <p>Run diagnostics to receive recommendations.</p>
+            </div>
+
+        </section>
+
+        <!-- Diagnostic History -->
+
+        <section class="history">
+
+            <h2>Diagnostic History</h2>
+
+            <button onclick="loadHistory()">
+                Refresh History
+            </button>
+
+            <div id="history-list">
+                <p>No history available yet.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>TechResolve | IT Infrastructure Diagnostics</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
